@@ -428,10 +428,10 @@ Bins Monitoring Page
   border-radius: 6px;
   transition: width 0.5s ease;
   position: relative;
-  background-image: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0.2) 0%, 
-    transparent 50%, 
-    rgba(255, 255, 255, 0.2) 100%);
+  background-image: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 100%);
 }
 
 .volume-warning {
@@ -562,15 +562,26 @@ Bins Monitoring Page
 }
 
 .action-btn {
-  padding: 0.65rem;
+  display: inline-flex;
+  flex-direction: column;
+  /* biar icon di atas, teks di bawah */
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  /* jarak antara icon dan teks */
+  padding: 0.8rem 1.25rem;
+  min-width: 110px;
+  min-height: 80px;
   border: 1px solid #e0e0e0;
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 0.85rem;
-  color: #666;
+  color: #555;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .action-btn:hover {
@@ -630,6 +641,7 @@ Bins Monitoring Page
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -641,6 +653,7 @@ Bins Monitoring Page
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -651,6 +664,7 @@ Bins Monitoring Page
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -660,22 +674,35 @@ Bins Monitoring Page
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
 @keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     transform: translateX(-2px);
   }
-  20%, 40%, 60%, 80% {
+
+  20%,
+  40%,
+  60%,
+  80% {
     transform: translateX(2px);
   }
 }
@@ -705,11 +732,11 @@ Responsive Design
   .search-input {
     width: 100%;
   }
-  
+
   .bins-container {
     padding: 1rem;
   }
-  
+
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -764,7 +791,7 @@ Responsive Design
     width: 40px;
     height: 40px;
   }
-  
+
   .stats-container {
     grid-template-columns: 1fr;
   }

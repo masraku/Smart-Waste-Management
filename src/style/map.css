@@ -57,7 +57,7 @@
 .refresh-btn:hover {
   background: #42aee0;
   color: white;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 .view-list-btn {

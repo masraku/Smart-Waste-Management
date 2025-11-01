@@ -317,16 +317,20 @@ export default function BinsPage() {
 
             {/* Action Buttons */}
             <div className="action-buttons">
-              <Link href={`/dashboard/bins/${bin.id}`}>
-                <button className="action-btn">📊 Detail</button>
+              <Link href={`/dashboard/bins/${bin.id}`} className="action-btn">
+                <span>📊</span>
+                <span>Detail</span>
               </Link>
-              <button className="action-btn">
-                📈 Riwayat
-              </button>
-              <button className="action-btn">
-                ⚙️ Pengaturan
-              </button>
+              <Link href={`/dashboard/bins/${bin.id}/history`} className="action-btn">
+                <span>📈</span>
+                <span>Riwayat</span>
+              </Link>
+              <Link href={`/dashboard/bins/${bin.id}/settings`} className="action-btn">
+                <span>⚙️</span>
+                <span>Pengaturan</span>
+              </Link>
             </div>
+
           </div>
         ))}
       </div>

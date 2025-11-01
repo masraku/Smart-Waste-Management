@@ -321,7 +321,7 @@ export default function DashboardPage() {
       <div className="bins-section">
         <div className="section-header">
           <h3 className="section-title">Status Tempat Sampah Terkini</h3>
-          <Link href="/bins">
+          <Link href="/dashboard/bins">
             <button className="view-all-btn">
               Lihat Semua →
             </button>
